@@ -1,0 +1,230 @@
+body{
+    margin: 0;
+    padding: 0
+}
+
+@font-face{
+    font-family: 'red-bold';
+    src: url(assets/font/static/RedHatDisplay-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family: 'font-desc';
+    src: url(assets/font/static/RedHatDisplay-Light.ttf);
+}
+
+@font-face{
+    font-family: 'icon-solid';
+    src: url(assets/fontawesome-free-5.15.4-desktop/otfs/Font\ Awesome\ 5\ Free-Solid-900.otf);
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(225, 80%, 86%);
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr auto auto;
+}
+
+@media screen and (max-width:320px){
+    .card{
+        height: 98%;
+    }
+}
+
+
+@media screen and (min-width:768px){
+    main{
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .card{
+        width: 70%;
+        height: 80%;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .card{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1920px){
+    .card{
+        width: 30%;
+        grid-template-rows: 2fr 1fr 1fr auto auto;
+    }
+    
+}
+
+.header{
+    background-image: url(images/illustration-hero.svg);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px ;
+    background-size: cover;
+    grid-row: 1;
+}
+
+.title{
+    grid-row: 2 / 4;
+    align-self: center;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 60%;
+}
+
+.texto{
+    grid-row: 1;
+}
+
+.texto span{
+    font-family: 'red-bold';
+    font-size: 30px;
+    color: hsl(223, 47%, 23%);
+}
+
+.texto p{
+    font-family: 'red-bold';
+    font-size: 12px;
+    letter-spacing: 1px;
+    color:rgba(120, 137, 169, 0.679)
+}
+
+@media screen and (min-width:768px){
+    .texto p{
+        font-size: 16px;
+    }
+}
+
+
+.plano{
+    align-self: center;
+    justify-self: center;
+    grid-row: 2;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 15px;
+    width: 80%;
+    height: 90%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+
+@media screen and (min-width:768px){
+    .plano{
+        width: 50%;
+    }
+}
+
+.icon{
+    background-color: rgba(255, 255, 255, 0);
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.circulo{
+    width: 50px;
+    height: 50px;
+    background-color: hsl(225, 80%, 86%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.circulo::before{
+    font-family: 'icon-solid';
+    content: '\f001';
+    font-size: 20px;
+    color: hsl(223, 47%, 23%);
+    align-self: center;
+}
+
+.title-plano{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    padding: 30px 0px;
+    grid-column: 2;
+    flex-wrap: wrap;
+
+}
+.title-plano span{
+    font-family: 'red-bold';
+    font-size: 16px;
+    color: hsl(223, 47%, 23%);
+}
+
+.title-plano p{
+    font-family: 'red-bold';
+    font-size: 12px;
+    letter-spacing: 1px;
+    color:rgba(120, 137, 169, 0.679)
+}
+
+.change{
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.button{
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.button .button1{
+    height: 50px;
+    width: 60%;
+    
+    border-radius: 10px;
+    color: white;
+    font-family: 'red-bold';
+    font-weight: 700;
+    font-size: 15px;
+    border:1px solid transparent;
+    background-color:  hsl(245, 75%, 52%);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button .button1:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 10px rgba(68, 2, 68, 0.309);
+    transition: all 0.5s;
+}
+
+.cancel{
+    grid-row: 5;
+    display: flex;
+    justify-content: center;
+    align-self: start;
+}
+
+.cancel span{
+    cursor: pointer;
+    padding: 10px 0 50px 0;
+    font-family: 'red-bold';
+    font-size: 16px;
+    color:rgba(120, 137, 169, 0.679);
+    transition: all 0.5s;
+}
+
+.txt:hover{
+    color:  hsl(245, 75%, 52%);
+    transition: all 0.5s;
+}
